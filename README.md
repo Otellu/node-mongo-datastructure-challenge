@@ -8,31 +8,16 @@ You're tasked with building a simplified version of **LinkedIn Groups** with a f
 
 ---
 
-## 📦 Entities
+## 📦 Core Entities
 
-### 1. **User**
+You’ll need to design and implement the following entities:
 
-- name
-- email (assume it's unique)
+- User
+- Group
+- Post
+- Reaction
 
-### 2. **Group**
-
-- name
-- description
-- list of members (users)
-
-### 3. **Post**
-
-- group
-- author (user)
-- content
-- createdAt
-
-### 4. **Reaction**
-
-- post
-- user
-- type (like, love, laugh, etc.)
+Please decide which fields each entity needs based on the scenario below and your own understanding of a practical, scalable schema.
 
 ---
 
@@ -42,7 +27,7 @@ You're tasked with building a simplified version of **LinkedIn Groups** with a f
 
 1. **Schema Design**
 
-   - Define Mongoose models for User, Group, Post, and Reaction.
+   - Define Mongoose models for the entities above.
    - Use references and/or embedded documents where appropriate.
    - Add inline comments explaining **why** you made certain schema decisions.
 
@@ -65,14 +50,14 @@ You're tasked with building a simplified version of **LinkedIn Groups** with a f
 
 ### 💡 Bonus (Optional)
 
-- Seed the DB with 2 users, 1 group, and 2 posts.
+- Seed the DB with some sample users, groups, and posts.
 - Add pagination to the group feed.
-- Add `createdAt` timestamps and sort the feed by newest first.
-- Add a brief comment or file explaining how you'd scale this model (e.g. denormalization, indexes, etc.)
+- Add timestamps and sort posts by newest first.
+- Leave a short note on how you’d scale or optimize this model at scale (e.g. denormalization, indexing strategies, etc.)
 
 ---
 
-## 🚀 Setup Instructions
+## 🚀 Getting Started
 
 ```bash
 # Install dependencies
@@ -84,4 +69,3 @@ mongod
 # Start the server
 nodemon app.js
 ```
-# node-mongo-datastructure-challenge
